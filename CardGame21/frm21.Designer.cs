@@ -42,7 +42,7 @@
             this.btnHit = new System.Windows.Forms.Button();
             this.btnScore = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.lblPlayerScore = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -199,6 +199,7 @@
             this.btnDeal.TabIndex = 10;
             this.btnDeal.Text = "&Deal";
             this.btnDeal.UseVisualStyleBackColor = true;
+            this.btnDeal.Click += new System.EventHandler(this.btnDeal_Click);
             // 
             // btnHit
             // 
@@ -209,6 +210,7 @@
             this.btnHit.TabIndex = 11;
             this.btnHit.Text = "&Hit";
             this.btnHit.UseVisualStyleBackColor = true;
+            this.btnHit.Click += new System.EventHandler(this.btnHit_Click);
             // 
             // btnScore
             // 
@@ -229,16 +231,18 @@
             this.btnAbout.TabIndex = 13;
             this.btnAbout.Text = "&About";
             this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
-            // button1
+            // btnExit
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(613, 305);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 39);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "E&xit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(613, 305);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 39);
+            this.btnExit.TabIndex = 14;
+            this.btnExit.Text = "E&xit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label11
             // 
@@ -300,7 +304,7 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.lblPlayerScore);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnScore);
             this.Controls.Add(this.btnHit);
@@ -338,7 +342,7 @@
         private System.Windows.Forms.Button btnHit;
         private System.Windows.Forms.Button btnScore;
         private System.Windows.Forms.Button btnAbout;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblPlayerScore;
         private System.Windows.Forms.Label label13;
