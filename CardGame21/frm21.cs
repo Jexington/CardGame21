@@ -15,6 +15,58 @@ namespace CardGame21
         int intCard1, intCard2, intCard3, intCard4;
         int intDealer1, intDealer2, intDealer3, intDealer4;
 
+        private void btnScore_Click(object sender, EventArgs e)
+        {
+            btnHit.Enabled = false;
+            //Add more cards to dealer if needed
+            if (intDealerScore < intPlayerScore)
+            {
+                do
+                {
+                    if (lblDealer3.Visible == false)
+                    {
+                        lblDealer3.Visible = true;
+                        intDealerScore += intDealer3;
+                    }
+                    else
+                    {
+                        lblDealer4.Visible = true;
+                        intDealerScore += intDealer4;
+                    }
+                } while (intDealerScore < 15);
+
+            }
+            lblDealerScore.Text = intDealerScore.ToString();
+            if (intDealerScore > 21)
+            {
+                lblWinner.Text = "Dealer went bust! Player Wins!! Game Over!";
+            }
+            else
+            {
+                if (intPlayerScore > intDealerScore)
+                {
+                    //Player Wins
+                    lblWinner.Text = "Player Wins!!";
+                    btnScore.Enabled = false;
+                    btnDeal.Enabled = true;
+                }
+                else if(intPlayerScore < intDealerScore)
+                {
+                    //Dealer Wins
+                    lblWinner.Text = "Dealer Wins!! Try Again!";
+                    btnScore.Enabled = false;
+                    btnDeal.Enabled = true;
+                }
+                else
+                {
+                    //Tie Game
+                    lblWinner.Text = "Tie Game. No Winner.";
+                    btnScore.Enabled = false;
+                    btnDeal.Enabled = true;
+                }
+            }
+        }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
